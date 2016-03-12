@@ -65,7 +65,7 @@ public class App
     		}
     		
     		if(flag){
-    			q.connect("127.0.0.1", "hr");
+    			q.connect("127.0.0.1", "freeway");
     			q.execute();
     			
     		}
