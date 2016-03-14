@@ -8,11 +8,11 @@ import com.datastax.driver.core.Row;
 public class Query4 extends Query{
 	class Station{
 		public String locationtext;
-		public String stationid;
-		public String downstream;
-		public String upstream;
+		public int stationid;
+		public int downstream;
+		public int upstream;
 		
-		public Station(String loc, String statid, String down, String up){
+		public Station(String loc, int statid, int down, int up){
 			this.locationtext = loc;
 			this.stationid = statid;
 			this.downstream = down;
@@ -22,28 +22,29 @@ public class Query4 extends Query{
 	
 	public void execute(){
 		//To To: Write your query here and print out the result
-		String begin="", end="";
+		int begin=0, end=0;
+		
 		Map<String, Station> m = new HashMap<String, Station>();
 		Queue<Station> up = new LinkedList<Station>();
 		Queue<Station> down = new LinkedList<Station>();
 	    result = session.execute("select locationtext, stationid, downstream, upstream from station_data");
 	    for(Row row: result){
 	        Station s = new Station(row.getString("locationtext"), 
-	        		row.getString("stationid"), 
-	        		row.getString("downstream"),
-	        		row.getString("upstream"));
+	        		row.getInt("stationid"), 
+	        		row.getInt("downstream"),
+	        		row.getInt("upstream"));
 	        m.put(row.getString("stationid"), s);
 	        
 	        if(row.getString("locationtext").equals("Johnson Cr NB")){
-	        	begin = row.getString("stationid");
+	        	begin = row.getInt("stationid");
 	        }
 	        
 	        if(row.getString("locationtext").equals("Columbia to I-205 NB")){
-	        	end = row.getString("stationid");
+	        	end = row.getInt("stationid");
 	        }   
 	    }
 	    
-	    if(begin.equals("") || end.equals("")){
+	    if(begin == 0 || end == 0){
 	    	System.out.println("Cannot find begin or end station");
 	    	return;
 	    }
@@ -58,7 +59,7 @@ public class Query4 extends Query{
 	    		break;
 	    	}else{
 	    		down.add(cur);
-	    		if(cur.stationid.equals(end)){
+	    		if(cur.stationid == end){
 	    			System.out.println("Found Path in Downstream:");
 	    			while(!down.isEmpty()){
 	    				System.out.println(down.remove().locationtext);
@@ -78,7 +79,7 @@ public class Query4 extends Query{
 	    		break;
 	    	}else{
 	    		up.add(cur);
-	    		if(cur.stationid.equals(end)){
+	    		if(cur.stationid == end){
 	    			System.out.println("Found Path in Upstream:");
 	    			while(!up.isEmpty()){
 	    				System.out.println(up.remove().locationtext);
@@ -86,10 +87,6 @@ public class Query4 extends Query{
 	    			return;
 	    		}
 	    	}
-	    }
-	    
-	    
-	    
-	    
+	    }   
 	}
 };
