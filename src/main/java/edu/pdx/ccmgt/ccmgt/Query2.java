@@ -11,7 +11,7 @@ public class Query2 extends Query{
 		System.out.println("Query 2 To Do Here");
 		result1=session.execute("select detectorid from detector_data where locationtext='Foster NB'");
 		StringBuilder tempquery=new StringBuilder();
-		tempquery.append("Select sum(volume) as sum_volume from loopdata where detectorid IN (");
+		tempquery.append("Select sum(volume) as sum_volume from loop where detectorid IN (");
 
 		int i=0;
 		for (Row row : result1) {

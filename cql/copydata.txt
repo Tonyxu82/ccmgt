@@ -1,0 +1,3 @@
+COPY station_data(stationid,highwayid,milepost,locationtext,upstream,downstream,stationclass,numberlanes,latlon,length) from 'C:\Users\Tony\workspace\ccmgt\cql\freeway_stations.csv' with HEADER='true';
+COPY detector_data (locationtext, detectorid, stationid, detectorclass, lanenumber, milepost) from 'C:\Users\Tony\workspace\ccmgt\cql\freeway_detectors.csv' with header='true';
+COPY loop(detectorid, starttime, volume, speed, occupancy, status,dqflags) FROM 'C:\Users\Tony\workspace\ccmgt\cql\freeway_loopdata_oneday.csv' WITH HEADER='true' AND DATETIMEFORMAT='%m/%d/%Y %H:%M:%S' AND CHUNKSIZE=300000;

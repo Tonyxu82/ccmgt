@@ -29,9 +29,9 @@ public class Query3 extends Query{
 				tempquery1.append(",");
 				i+=1;
 			}
-			tempquery1.append("'");
+			//tempquery1.append("'");
 			tempquery1.append(row.getInt("detectorid"));
-			tempquery1.append("'");
+			//tempquery1.append("'");
 			//System.out.println(row.getInt("detectorid"));
 			i+=1;
 		}
@@ -59,9 +59,9 @@ public class Query3 extends Query{
 				j+=1;
 			}
 			//System.out.println(row.getInt("detectorid"));
-			tempquery2.append("'");
+			//tempquery2.append("'");
 			tempquery2.append(row.getInt("detectorid"));
-			tempquery2.append("'");
+			//tempquery2.append("'");
 			//System.out.println(row.getInt("detectorid"));
 			j+=1;
 		}

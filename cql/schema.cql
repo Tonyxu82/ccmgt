@@ -1,13 +1,38 @@
-use freeway;
-CREATE TABLE Station_data (
- locationtext text,
- length float,
- stationid int  PRIMARY KEY,
- stationclass int,
- numberlanes int,
- latlon text,
- upstream int,
- downstream int,
- milepost float,
- highwayid int
+create keyspace freeway with replication={'class':'SimpleStrategy', 'replication_factor':1};
+
+CREATE TABLE freeway.station_data (
+ 	locationtext text,
+ 	length float,
+ 	stationid int,
+ 	stationclass int,
+ 	numberlanes int,
+ 	latlon text,
+ 	upstream int,
+ 	downstream int,
+ 	milepost float,
+ 	highwayid int,
+ 	PRIMARY KEY (stationid)
+);
+
+CREATE TABLE freeway.loop (
+    detectorid int,
+    starttime timestamp,
+    dqflags int,
+    occupancy int,
+    speed int,
+    status int,
+    volume int,
+    PRIMARY KEY (detectorid, starttime)
+);
+
+CREATE INDEX sindex ON freeway.loop(dqflags);
+
+CREATE TABLE freeway.detector_data (
+    locationtext text,
+    detectorid int,
+    detectorclass int,
+    lanenumber int,
+    milepost float,
+    stationid int,
+    PRIMARY KEY (locationtext, detectorid)
 );

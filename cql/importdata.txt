@@ -1,1 +1,0 @@
-COPY station_data(stationid,highwayid,milepost,locationtext,upstream,downstream,stationclass,numberlanes,latlon,length) from 'E:\freeway_stations.csv' with HEADER='true';

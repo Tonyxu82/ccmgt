@@ -1,0 +1,53 @@
+locationtext,detectorid,stationid,detectorclass,lanenumber,milepost
+Sunnyside NB,1345,1045,1,1,14.32
+Sunnyside NB,1346,1045,1,2,14.32
+Sunnyside NB,1347,1045,1,3,14.32
+Sunnyside NB,1348,1045,1,4,14.32
+Johnson Cr NB,1353,1046,1,1,16.2
+Johnson Cr NB,1354,1046,1,2,16.2
+Johnson Cr NB,1355,1046,1,3,16.2
+Foster NB,1361,1047,1,1,18.1
+Foster NB,1362,1047,1,2,18.1
+Foster NB,1363,1047,1,3,18.1
+Powell to I-205 NB,1809,1117,1,1,19.4
+Powell to I-205 NB,1810,1117,1,2,19.4
+Powell to I-205 NB,1811,1117,1,3,19.4
+Division NB,1369,1048,1,1,19.78
+Division NB,1370,1048,1,2,19.78
+Division NB,1371,1048,1,3,19.78
+I-205 NB at Glisan,1949,1142,1,1,21.12
+I-205 NB at Glisan,1950,1142,1,2,21.12
+I-205 NB at Glisan,1951,1142,1,3,21.12
+I-205 NB at Columbia,1941,1140,1,1,23.41
+I-205 NB at Columbia,1942,1140,1,2,23.41
+I-205 NB at Columbia,1943,1140,1,3,23.41
+Sunnyside SB,1856,1125,1,1,14.58
+Sunnyside SB,1857,1125,1,2,14.58
+Sunnyside SB,1858,1125,1,3,14.58
+Johnson Creek SB,1730,1098,1,1,16.24
+Johnson Creek SB,1731,1098,1,2,16.24
+Johnson Creek SB,1732,1098,1,3,16.24
+Foster SB,1417,1054,1,1,17.5
+Foster SB,1418,1054,1,2,17.5
+Foster SB,1419,1054,1,3,17.5
+Powell Blvd SB,1409,1053,1,1,18.92
+Powell Blvd SB,1410,1053,1,2,18.92
+Powell Blvd SB,1411,1053,1,3,18.92
+Division SB,1401,1052,1,1,19.25
+Division SB,1402,1052,1,2,19.25
+Division SB,1403,1052,1,3,19.25
+Stark/Washington SB,1393,1051,1,1,20.34
+Stark/Washington SB,1394,1051,1,2,20.34
+Stark/Washington SB,1395,1051,1,3,20.34
+I-205 SB at Glisan,1953,1143,1,1,21.12
+I-205 SB at Glisan,1954,1143,1,2,21.12
+I-205 SB at Glisan,1955,1143,1,3,21.12
+I-205 SB at Columbia,1945,1141,1,1,23.41
+I-205 SB at Columbia,1946,1141,1,2,23.41
+I-205 SB at Columbia,1947,1141,1,3,23.41
+Airportway EB to SB,1385,1050,1,1,24.66
+Airportway EB to SB,1386,1050,1,2,24.66
+Airportway EB to SB,1387,1050,1,3,24.66
+Airportway WB to SB,1377,1049,1,1,24.77
+Airportway WB to SB,1378,1049,1,2,24.77
+Airportway WB to SB,1379,1049,1,3,24.77

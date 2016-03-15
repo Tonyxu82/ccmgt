@@ -20,10 +20,10 @@ public class Query1 extends Query{
 		System.out.println("Detector Id's When Speed > 100:");
 		
         //Executing the query
-        result1 = session.execute("select count(*) as count from QOEdit1 where dqflags = 4");
-        result2 = session.execute("select count(*) as count from QOEdit1 where dqflags = 5");
-        result3 = session.execute("select count(*) as count from QOEdit1 where dqflags = 6");
-        result4 = session.execute("select count(*) as count from QOEdit1 where dqflags = 7");
+        result1 = session.execute("select count(*) as count from loop where dqflags = 4");
+        result2 = session.execute("select count(*) as count from loop where dqflags = 5");
+        result3 = session.execute("select count(*) as count from loop where dqflags = 6");
+        result4 = session.execute("select count(*) as count from loop where dqflags = 7");
         
         for(Row row: result1){
         	System.out.println("When dqflags=4");

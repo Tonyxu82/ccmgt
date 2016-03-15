@@ -24,7 +24,7 @@ public class Query4 extends Query{
 		//To To: Write your query here and print out the result
 		int begin=0, end=0;
 		
-		Map<String, Station> m = new HashMap<String, Station>();
+		Map<Integer, Station> m = new HashMap<Integer, Station>();
 		Queue<Station> up = new LinkedList<Station>();
 		Queue<Station> down = new LinkedList<Station>();
 	    result = session.execute("select locationtext, stationid, downstream, upstream from station_data");
@@ -33,7 +33,7 @@ public class Query4 extends Query{
 	        		row.getInt("stationid"), 
 	        		row.getInt("downstream"),
 	        		row.getInt("upstream"));
-	        m.put(row.getString("stationid"), s);
+	        m.put(row.getInt("stationid"), s);
 	        
 	        if(row.getString("locationtext").equals("Johnson Cr NB")){
 	        	begin = row.getInt("stationid");
