@@ -14,6 +14,8 @@ CREATE TABLE freeway.station_data (
  	PRIMARY KEY (stationid)
 );
 
+CREATE INDEX sindex ON freeway.station_data(locationtext);
+
 CREATE TABLE freeway.loop (
     detectorid int,
     starttime timestamp,
@@ -25,7 +27,20 @@ CREATE TABLE freeway.loop (
     PRIMARY KEY (detectorid, starttime)
 );
 
-CREATE INDEX sindex ON freeway.loop(dqflags);
+CREATE INDEX sindex1 ON freeway.loop(dqflags);
+
+CREATE TABLE freeway.loopmain (
+    detectorid int,
+    starttime timestamp,
+    dqflags int,
+    occupancy int,
+    speed int,
+    status int,
+    volume int,
+    PRIMARY KEY (detectorid, starttime)
+);
+
+CREATE INDEX sindex2 ON freeway.loopmain(dqflags);
 
 CREATE TABLE freeway.detector_data (
     locationtext text,
